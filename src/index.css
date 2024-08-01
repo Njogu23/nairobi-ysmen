@@ -1,0 +1,25 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f2f2f5;
+}
+
+/* Target all scrollbars */
+::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #030749; /* color of the scrollbar handle */
+    border-radius: 5px; /* roundness of the handle */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white; /* color of the scrollbar track */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #030749; /* color of the handle when hovered */
+}

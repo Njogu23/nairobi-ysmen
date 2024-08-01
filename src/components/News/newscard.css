@@ -1,0 +1,28 @@
+/* NewsSection.css */
+
+/* Customize the dots */
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #d32f2f; /* Dark red color for dots */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #1a237e; /* Dark blue color for active dots */
+  }
+  
+  /* Customize the arrows */
+  .slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    color: #1a237e; /* Dark blue color for arrows */
+  }
+
+  .slider-container {
+    margin:50px 30px; /*  /* Add horizontal padding */
+  }
+  
+  .slider-item {
+    padding: 10px; /* Adjust padding between items */
+  }
+
+  
+  

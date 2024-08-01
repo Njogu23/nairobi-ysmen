@@ -1,0 +1,55 @@
+.about {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('fellowship.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.about-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.about-button:hover {
+    background-color: #ddd;
+}
