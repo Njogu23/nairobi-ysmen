@@ -27,6 +27,20 @@
   text-align: center;
   padding: 10px;
   z-index: 2; /* Ensure text is above the overlay */
+  opacity: 0; /* Initial state for animation */
+  animation: fadeInUp 1s forwards; /* Apply animation */
+}
+
+/* Animation for text */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .carousel-text h2 {
@@ -42,4 +56,58 @@
 
 .carousel-text p {
   font-size: 1rem;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+
+  .carousel-image {
+    height: 60vh; /* Ensure image height is adjusted */
+  }
+
+  .carousel-text {
+    padding: 5px; /* Reduce padding on smaller screens */
+    font-size: 0.8rem; /* Reduce font size */
+  }
+
+  .carousel-text h2 {
+    font-size: 2rem; /* Adjust font size for titles */
+  }
+
+  .carousel-text h3 {
+    font-size: 1.2rem; /* Adjust font size for subtitles */
+  }
+
+  .carousel-text p {
+    font-size: 0.8rem; /* Adjust font size for text */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 50vh; /* Further adjustment for very small screens */
+  }
+
+  .carousel-image {
+    height: 50vh; /* Ensure image height is adjusted */
+  }
+
+  .carousel-text {
+    font-size: 0.7rem; /* Further reduce font size */
+  }
+
+  .carousel-text h2 {
+    font-size: 1.5rem; /* Further adjust font size for titles */
+  }
+
+  .carousel-text h3 {
+    font-size: 1rem; /* Further adjust font size for subtitles */
+  }
+
+  .carousel-text p {
+    font-size: 0.7rem; /* Further adjust font size for text */
+  }
 }

@@ -130,11 +130,13 @@ function NavBar() {
               </div>
             ) : null}
             {!isMediumUp ? (
-              <img 
-                src="/y men.png" 
-                alt="logo" 
-                style={{ marginRight: 8, height: "40px" }} 
-              />
+               <NavLink className="navlink" to='/'>
+               <img
+                 src="/y men.png" 
+                 alt="logo" 
+                 style={{ marginRight: 8, height: "50px" }} 
+               />
+             </NavLink>
             ) : null}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
               <IconButton

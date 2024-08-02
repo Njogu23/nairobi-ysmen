@@ -52,7 +52,7 @@ const Hero = () => {
               className="carousel-image"
             />
             <div className="carousel-overlay">
-              <div className="carousel-text">
+              <div className="carousel-text animate-text">
                 <h2>{image.title}</h2>
                 <h3>{image.subtitle}</h3>
                 <p>{image.text}</p>
