@@ -1,4 +1,4 @@
-import  React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,34 +11,36 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { FaFacebook, FaInfo, FaInstagram } from 'react-icons/fa';
-import "./Navbar.css"
-import {NavLink} from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom';
+import "./Navbar.css";
 
 const navs = ['Home','About', 'Our Work', 'Publications'];
 
 function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
   const isMediumUp = useMediaQuery('(min-width:800px)');
   const [isVisible, setIsVisible] = useState(true);
-    let lastScrollTop = 0;
+  const [scrollUp, setScrollUp] = useState(false);
+  let lastScrollTop = 0;
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollTop = window.pageYOffset;
-            if (currentScrollTop > lastScrollTop) {
-                setIsVisible(false);
-            } else {
-                setIsVisible(true);
-            }
-            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollTop = window.pageYOffset;
+      if (currentScrollTop > lastScrollTop) {
+        setIsVisible(false);
+        setScrollUp(false);
+      } else {
+        setIsVisible(true);
+        setScrollUp(true);
+      }
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+    };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -50,79 +52,82 @@ function NavBar() {
 
   return (
     <>
-    
-    <AppBar position="fixed" className='nav-bar' sx={{backgroundColor:"white"}}>
-      <nav className={`navbar ${isVisible ? '' : 'navbar--hidden'}`}>
-        <div className="navbar-content">
-          <a href="#about" className="navbar-link"><FaInfo /> About</a>
-          <a href="#home" className="navbar-link"><FaFacebook />Facebook</a>
-          <a href="#contact" className="navbar-link"><FaInstagram />Instagram</a>
-        </div>
-      </nav>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <AppBar 
+        position="fixed" 
+        className={`nav-bar ${scrollUp ? 'nav-bar-scroll-up' : ''}`} 
+        sx={{ backgroundColor: "white" }}
+      >
+        <nav className={`navbar ${isVisible ? '' : 'navbar--hidden'}`}>
+          <div className="navbar-content">
+            <a href="#about" className="navbar-link-top"><FaInfo /> About</a>
+            <a href="#home" className="navbar-link-top"><FaFacebook />Facebook</a>
+            <a href="#contact" className="navbar-link-top"><FaInstagram />Instagram</a>
+          </div>
+        </nav>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
             {isMediumUp ? (
               <div className='nav'>
-              <div className='logo'>  
-              <NavLink className="navlink" to='/'>
-                <img
-                  src="/y men.png" 
-                  alt="logo" 
-                  style={{ marginRight: 8, height: "50px" }} 
-                />
-              </NavLink>
-              <NavLink className="navlink" to='/'>
-                <Typography
-                  variant="h6"
-                  noWrap
-                  component="a"
-                  href="#app-bar-with-responsive-menu"
-                  sx={{
-                    display: { xs: 'none', md: 'flex' },
-                    textAlign: "right",
-                    fontFamily: 'Courier',
-                    fontWeight: 700,
-                    letterSpacing: '.3rem',
-                    color: '#030749',
-                    textDecoration: 'none',
-                  }}
-                >
-                  NAIROBI CLUB
-                </Typography>
-              </NavLink>
-            </div>
-            <div className='navs'>
-            <Box sx={{ flexGrow: 1, fontFamily: 'Courier', display: { xs: 'none', md: 'flex' } }}>
-              {navs.map((n) => (
-                <NavLink className="navlink" to={n === 'Home'? "/" : n}>
-                  <Button
-                    key={n}
-                    onClick={handleCloseNavMenu}
-                    onMouseOver={(e)=> {
-                      e.target.style.backgroundColor = "#030749"
-                      e.target.style.color = "white"
-                    }}
-                    onMouseOut={(e)=> {
-                      e.target.style.backgroundColor = "white"
-                      e.target.style.color = "#030749"
-                    }}
-                    sx={{
-                      my: 2,
-                      color: '#030749',
-                      marginLeft: "50px",
-                      border: '1px solid #030749',
-                      fontFamily: "Courier",
-                      fontWeight: 600,
-                      display: 'block'
-                    }}
-                  >
-                    {n}
-                  </Button>
-                </NavLink>
-              ))}
-            </Box>
-            </div>
-            </div>
+                <div className='logo'>  
+                  <NavLink className="navlink" to='/'>
+                    <img
+                      src="/y men.png" 
+                      alt="logo" 
+                      style={{ marginRight: 8, height: "50px" }} 
+                    />
+                  </NavLink>
+                  <NavLink className="navlink" to='/'>
+                    <Typography
+                      variant="h6"
+                      noWrap
+                      component="a"
+                      href="#app-bar-with-responsive-menu"
+                      sx={{
+                        display: { xs: 'none', md: 'flex' },
+                        textAlign: "right",
+                        fontFamily: 'Courier',
+                        fontWeight: 700,
+                        letterSpacing: '.3rem',
+                        color: '#030749',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      NAIROBI CLUB
+                    </Typography>
+                  </NavLink>
+                </div>
+                <div className='navs'>
+                  <Box sx={{ flexGrow: 1, fontFamily: 'Courier', display: { xs: 'none', md: 'flex' } }}>
+                    {navs.map((n) => (
+                      <NavLink className="navlink" to={n === 'Home' ? "/" : n}>
+                        <Button
+                          key={n}
+                          onClick={handleCloseNavMenu}
+                          onMouseOver={(e) => {
+                            e.target.style.backgroundColor = "#030749";
+                            e.target.style.color = "white";
+                          }}
+                          onMouseOut={(e) => {
+                            e.target.style.backgroundColor = "white";
+                            e.target.style.color = "#030749";
+                          }}
+                          sx={{
+                            my: 2,
+                            color: '#030749',
+                            marginLeft: "50px",
+                            border: '1px solid #030749',
+                            fontFamily: "Courier",
+                            fontWeight:'900',
+                            display: 'block'
+                          }}
+                        >
+                          {n}
+                        </Button>
+                      </NavLink>
+                    ))}
+                  </Box>
+                </div>
+              </div>
             ) : null}
             {!isMediumUp ? (
               <img 
@@ -140,7 +145,7 @@ function NavBar() {
                 onClick={handleOpenNavMenu}
                 color="inherit"
               >
-                <MenuIcon sx={{color:'#030749'}}/>
+                <MenuIcon sx={{ color: '#030749' }} />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -157,13 +162,13 @@ function NavBar() {
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: 'block', md: 'none'}
+                  display: { xs: 'block', md: 'none' }
                 }}
               >
                 {navs.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <NavLink className="navlink" to={page === "Home"? "/" : page}>
-                      <Typography textAlign="center" sx={{fontFamily:"Courier", fontWeight:600, color:'#030749'}}>{page} </Typography>
+                    <NavLink className="navbar-link" to={page === "Home" ? "/" : page}>
+                      <Typography textAlign="center" sx={{ fontFamily: "Courier", fontWeight: 900, color: '#030749' }}>{page}</Typography>
                     </NavLink>
                   </MenuItem>
                 ))}
@@ -185,11 +190,11 @@ function NavBar() {
             >
               NAIROBI CLUB
             </Typography>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </>
-    
   );
 }
+
 export default NavBar;
