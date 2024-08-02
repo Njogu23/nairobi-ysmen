@@ -14,7 +14,7 @@ import { FaFacebook, FaInfo, FaInstagram } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
-const navs = ['Home','About', 'Our Work', 'Publications'];
+const navs = ['Home','About', 'What We Do', 'Publications'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);

@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh; 
-    background-image: url('fellowship.jpg'); /* Replace with your image URL */
+    background-image: url('/fellowship.jpg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
