@@ -25,21 +25,18 @@
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
-  padding: 10px;
-  z-index: 2; /* Ensure text is above the overlay */
-  opacity: 0; /* Initial state for animation */
-  animation: fadeInUp 1s forwards; /* Apply animation */
+  animation: slideInUp 1s forwards; /* Updated animation */
+  z-index: 2; 
 }
 
-/* Animation for text */
-@keyframes fadeInUp {
+@keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, 20%); /* Start from below */
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* End at the center */
   }
 }
 
@@ -64,10 +61,6 @@
     height: 60vh; /* Adjust height for smaller screens */
   }
 
-  .carousel-image {
-    height: 60vh; /* Ensure image height is adjusted */
-  }
-
   .carousel-text {
     padding: 5px; /* Reduce padding on smaller screens */
     font-size: 0.8rem; /* Reduce font size */
@@ -89,10 +82,6 @@
 @media (max-width: 480px) {
   .carousel-container {
     height: 50vh; /* Further adjustment for very small screens */
-  }
-
-  .carousel-image {
-    height: 50vh; /* Ensure image height is adjusted */
   }
 
   .carousel-text {
