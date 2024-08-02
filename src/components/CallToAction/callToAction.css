@@ -1,0 +1,19 @@
+.cta {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light gray background for contrast */
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #fd5507; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19; /* Darker shade for hover effect */
+}
