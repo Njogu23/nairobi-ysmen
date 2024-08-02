@@ -1,5 +1,6 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
 import './callToAction.css'; // Create a new CSS file for specific styling
 
 const CallToAction = () => (
@@ -30,7 +31,9 @@ const CallToAction = () => (
       Become a member, volunteer, or donate to support our cause. Together, we can make a difference!
     </Typography>
     <div style={{textAlign: 'center'}}>
-      <button className="cta-button">Join Us</button>
+        <NavLink to='/About Us'>
+            <button className="cta-button">Join Us</button>
+        </NavLink>
     </div>
   </div>
 );

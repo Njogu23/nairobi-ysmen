@@ -79,3 +79,16 @@
 .navlink {
   text-decoration: none;
 }
+.navlink-logo {
+  text-decoration: none;
+}
+
+.navlink.active {
+  background-color: #030749;
+  color: white;
+}
+
+.navbar-link.active {
+  background-color: #030749;
+  color: white;
+}

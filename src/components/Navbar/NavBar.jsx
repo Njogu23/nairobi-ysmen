@@ -14,7 +14,7 @@ import { FaFacebook, FaInfo, FaInstagram } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
-const navs = ['Home','About', 'What We Do', 'Publications'];
+const navs = ['Home', 'About-Us', 'What We Do', 'Publications'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -52,9 +52,9 @@ function NavBar() {
 
   return (
     <>
-      <AppBar 
-        position="fixed" 
-        className={`nav-bar ${scrollUp ? 'nav-bar-scroll-up' : ''}`} 
+      <AppBar
+        position="fixed"
+        className={`nav-bar ${scrollUp ? 'nav-bar-scroll-up' : ''}`}
         sx={{ backgroundColor: "white" }}
       >
         <nav className={`navbar ${isVisible ? '' : 'navbar--hidden'}`}>
@@ -68,15 +68,15 @@ function NavBar() {
           <Toolbar disableGutters>
             {isMediumUp ? (
               <div className='nav'>
-                <div className='logo'>  
-                  <NavLink className="navlink" to='/'>
+                <div className='logo'>
+                  <NavLink className="navlink-logo" to='/'>
                     <img
-                      src="/y men.png" 
-                      alt="logo" 
-                      style={{ marginRight: 8, height: "50px" }} 
+                      src="/y men.png"
+                      alt="logo"
+                      style={{ marginRight: 8, height: "50px" }}
                     />
                   </NavLink>
-                  <NavLink className="navlink" to='/'>
+                  <NavLink className="navlink-logo" to='/'>
                     <Typography
                       variant="h6"
                       noWrap
@@ -99,30 +99,24 @@ function NavBar() {
                 <div className='navs'>
                   <Box sx={{ flexGrow: 1, fontFamily: 'Courier', display: { xs: 'none', md: 'flex' } }}>
                     {navs.map((n) => (
-                      <NavLink className="navlink" to={n === 'Home' ? "/" : n}>
-                        <Button
-                          key={n}
-                          onClick={handleCloseNavMenu}
-                          onMouseOver={(e) => {
-                            e.target.style.backgroundColor = "#030749";
-                            e.target.style.color = "white";
-                          }}
-                          onMouseOut={(e) => {
-                            e.target.style.backgroundColor = "white";
-                            e.target.style.color = "#030749";
-                          }}
-                          sx={{
-                            my: 2,
-                            color: '#030749',
-                            marginLeft: "50px",
-                            border: '1px solid #030749',
-                            fontFamily: "Courier",
-                            fontWeight:'900',
-                            display: 'block'
-                          }}
-                        >
-                          {n}
-                        </Button>
+                      <NavLink
+                        className="navlink"
+                        to={n === 'Home' ? "/" : n.toLowerCase()}
+                        key={n}
+                        style={({ isActive }) => ({
+                          backgroundColor: isActive ? "#030749" : "white",
+                          color: isActive ? "white" : "#030749",
+                          marginLeft: "50px",
+                          border: '1px solid #030749',
+                          fontFamily: "Courier",
+                          fontWeight: '900',
+                          display: 'block',
+                          borderRadius: '5px',
+                          textDecoration: 'none',
+                          padding: '8px 16px'
+                        })}
+                      >
+                        {n}
                       </NavLink>
                     ))}
                   </Box>
@@ -130,13 +124,13 @@ function NavBar() {
               </div>
             ) : null}
             {!isMediumUp ? (
-               <NavLink className="navlink" to='/'>
-               <img
-                 src="/y men.png" 
-                 alt="logo" 
-                 style={{ marginRight: 8, height: "50px" }} 
-               />
-             </NavLink>
+              <NavLink className="navlink-logo" to='/'>
+                <img
+                  src="/y men.png"
+                  alt="logo"
+                  style={{ marginRight: 8, height: "50px" }}
+                />
+              </NavLink>
             ) : null}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
               <IconButton
@@ -169,8 +163,22 @@ function NavBar() {
               >
                 {navs.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <NavLink className="navbar-link" to={page === "Home" ? "/" : page}>
-                      <Typography textAlign="center" sx={{ fontFamily: "Courier", fontWeight: 900, color: '#030749' }}>{page}</Typography>
+                    <NavLink
+                      className="navbar-link"
+                      to={page === "Home" ? "/" : page}
+                      style={({ isActive }) => ({
+                        fontFamily: "Courier",
+                        fontWeight: 900,
+                        color: isActive ? "white" : '#030749',
+                        backgroundColor: isActive ? "#030749" : "transparent",
+                        textAlign: "center",
+                        textDecoration: 'none',
+                        display: 'block',
+                        width: '100%',
+                        padding: '10px 20px'
+                      })}
+                    >
+                      {page}
                     </NavLink>
                   </MenuItem>
                 ))}

@@ -1,6 +1,7 @@
 .carousel-container {
   position: relative;
   height: 100vh;
+  margin: 0 -8px;
 }
 
 .carousel-image {
@@ -79,8 +80,11 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .carousel-container {
+    height: 50vh; /* Further adjustment for very small screens */
+  }
+  .carousel-image {
     height: 50vh; /* Further adjustment for very small screens */
   }
 
