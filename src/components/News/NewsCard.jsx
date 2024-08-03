@@ -65,7 +65,7 @@ const NewsSection = () => {
         News & Updates
       </Typography>
       <hr style={{
-        width: '100%',
+        width: '30%',
         borderWidth: "1px",
         borderColor: '#fd5507',  
       }} />

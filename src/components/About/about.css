@@ -40,7 +40,7 @@
     max-width: 800px;
     padding: 20px;
     z-index: 2; /* Ensure it is above the dark overlay */
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .about h1 {

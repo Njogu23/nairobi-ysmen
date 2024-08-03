@@ -19,7 +19,6 @@ const About = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission here
         alert('Thank you for reaching out! We will get back to you soon.');
         setFormData({
             name: '',

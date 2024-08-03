@@ -52,6 +52,7 @@
   align-items: center;
   gap: 5px;
 }
+
 .navbar-link-top {
   color: white;
   text-decoration: none;
@@ -79,8 +80,21 @@
 .navlink {
   text-decoration: none;
 }
-.navlink-logo {
+
+.navbar-link-top {
+  color: white;
   text-decoration: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-link-top:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  color: #ffd700; /* Bright gold color */
+  border-radius: 5px; /* Optional: Add a border-radius for rounded corners */
 }
 
 .navlink.active {
@@ -91,4 +105,8 @@
 .navbar-link.active {
   background-color: #030749;
   color: white;
+}
+
+.navlink-logo {
+  text-decoration: none;
 }

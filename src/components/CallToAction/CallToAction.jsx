@@ -31,7 +31,7 @@ const CallToAction = () => (
       Become a member, volunteer, or donate to support our cause. Together, we can make a difference!
     </Typography>
     <div style={{textAlign: 'center'}}>
-        <NavLink to='/About-Us'>
+        <NavLink to='/aboutus'>
             <button className="cta-button">Join Us</button>
         </NavLink>
     </div>

@@ -7,14 +7,13 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { FaFacebook, FaInfo, FaInstagram } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
-const navs = ['Home', 'About-Us', 'What We Do', 'Publications'];
+const navs = ['Home', 'About Us', 'Activities', 'Publications'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -59,8 +58,8 @@ function NavBar() {
       >
         <nav className={`navbar ${isVisible ? '' : 'navbar--hidden'}`}>
           <div className="navbar-content">
-            <a href="#about" className="navbar-link-top"><FaInfo /> About</a>
-            <a href="#home" className="navbar-link-top"><FaFacebook />Facebook</a>
+            <a href="/aboutus" className="navbar-link-top"><FaInfo /> About</a>
+            <a href="https://web.facebook.com/profile.php?id=100068102534792" className="navbar-link-top"><FaFacebook />Facebook</a>
             <a href="#contact" className="navbar-link-top"><FaInstagram />Instagram</a>
           </div>
         </nav>
@@ -101,7 +100,7 @@ function NavBar() {
                     {navs.map((n) => (
                       <NavLink
                         className="navlink"
-                        to={n === 'Home' ? "/" : n.toLowerCase()}
+                        to={n === 'Home' ? "/" : `/${n.replace(/\s+/g, '').toLowerCase()}`}
                         key={n}
                         style={({ isActive }) => ({
                           backgroundColor: isActive ? "#030749" : "white",
@@ -165,7 +164,7 @@ function NavBar() {
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <NavLink
                       className="navbar-link"
-                      to={page === "Home" ? "/" : page}
+                      to={page === 'Home' ? "/" : `/${page.replace(/\s+/g, '').toLowerCase()}`}
                       style={({ isActive }) => ({
                         fontFamily: "Courier",
                         fontWeight: 900,

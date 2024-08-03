@@ -44,17 +44,25 @@
   }
   
   .footer-link {
-    color: #fd5507; /* Accent color */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    color: #fd5507; 
     text-decoration: none;
+    padding: 10px;
     margin: 0 5px;
   }
   
   .footer-link:hover {
-    text-decoration: underline;
+    background-color: rgb(253, 85, 7, 0.4); 
+    color: #ffffff; 
+    border-radius: 5px; 
   }
   
   .footer-bottom {
     margin-top: 20px;
+  }
+
+  .footer-text-last {
+    margin-top: 10px;
   }
   
   @media (max-width: 768px) {
