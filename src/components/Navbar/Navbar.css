@@ -64,6 +64,9 @@
 
 /* Media queries */
 @media (max-width: 760px) {
+  .navbar {
+    display: none;
+  }
   .navbar-content {
       justify-content: space-around;
   }
