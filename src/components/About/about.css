@@ -13,7 +13,7 @@
 .about-overlay {
     position: relative;
     width: 100%;
-    min-height: 90vh; /* Increase height as needed for a larger overlay */
+    min-height: 75vh; /* Increase height as needed for a larger overlay */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,21 +30,21 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Darker overlay with transparency */
     z-index: 1; /* Place it behind the content */
-    height: 95vh;
+    height: 80vh;
 }
 
 /* Overlay Content */
 .about-content {
     position: relative; /* Ensure it appears above the dark overlay */
     text-align: center;
-    max-width: 800px;
+    max-width: 700px;
     padding: 20px;
     z-index: 2; /* Ensure it is above the dark overlay */
     animation: fadeIn 1s ease-in-out;
 }
 
 .about h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     color: #fefefe; /* Bright white for header text */
     animation: slideInFromTop 1s ease-out;
@@ -60,7 +60,7 @@
 .about-button {
     padding: 10px 20px;
     font-size: 1rem;
-    color: #333;
+    color: #030749;
     background-color: #fff;
     border: none;
     cursor: pointer;
@@ -69,10 +69,6 @@
     text-decoration: none;
     display: inline-block;
     animation: fadeIn 2s ease-in-out;
-}
-
-.about-button:hover {
-    background-color: #ddd;
 }
 
 /* Styling for Sections Below Overlay */
@@ -160,15 +156,11 @@ h2 {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #1a237e; /* Dark blue color */
-    border: none;
+    background-color:#0a54f5;
+    border: none; 
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-}
-
-.contact-button:hover {
-    background-color: #0d0d7d;
 }
 
 /* Animations */

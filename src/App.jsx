@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import NavBar from "./components/Navbar/NavBar"
 import { Route, Routes } from "react-router-dom";
 import Publications from "./components/Publications/Publications";
+import ActivityDetail from "./components/Activities/ActivityDetails";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<About />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="/activity/:id" element={<ActivityDetail />} />
         <Route path="/publications" element={<Publications />} />
       </Routes>
       <Footer />

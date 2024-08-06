@@ -34,7 +34,18 @@ const About = () => {
                 <div className="about-content">
                     <h1>Welcome to the Nairobi Y's Men Club</h1>
                     <p className='about-p'>“To acknowledge the duty that accompanies every right.”</p>
-                    <a href="#contact-us" className="about-button">Join Us Today</a>
+                    <a
+                        onMouseOver={(e)=> {
+                          e.target.style.backgroundColor = "#030749"
+                          e.target.style.color = "white"
+                        }}
+                        onMouseOut={(e)=> {
+                          e.target.style.backgroundColor = "white"
+                          e.target.style.color = "#030749"
+                        }}
+                    href="#contact-us"
+                    className="about-button"
+                    >Join Us Today</a>
                 </div>
             </div>
             <div className="sections-container">
@@ -113,7 +124,18 @@ const About = () => {
                                 required
                             />
                         </label>
-                        <button type="submit" className="contact-button">Send Message</button>
+                        <button
+                        onMouseOver={(e)=> {
+                            e.target.style.backgroundColor = "#1979f5"
+                            e.target.style.color = "white"
+                          }}
+                          onMouseOut={(e)=> {
+                            e.target.style.backgroundColor = "#0a54f5"
+                            e.target.style.color = "white"
+                          }}
+                        type="submit"
+                        className="contact-button"
+                        >Send Message</button>
                     </form>
                 </section>
             </div>
