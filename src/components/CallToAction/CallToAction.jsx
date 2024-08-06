@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
-import './callToAction.css'; // Create a new CSS file for specific styling
+import './callToAction.css'; 
 
 const CallToAction = () => (
   <div className="cta homepage-section">
@@ -9,7 +9,7 @@ const CallToAction = () => (
         textAlign: 'center',
         fontSize: '36px',
         fontWeight: 'bold',
-        color: '#1a237e',  // Dark blue color
+        color: '#1a237e',  
         fontFamily: 'Arial, sans-serif',
         marginTop: '40px'
     }}>

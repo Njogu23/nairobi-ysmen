@@ -2,38 +2,12 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import "./hero.css";
+import { useContext } from "react";
+import { MyContext } from "../../MyContext";
 
 const Hero = () => {
-  const images = [
-    { 
-      src: "/main.jpg", 
-      alt: "main", 
-      title: "Welcome to Nairobi Y's Men Club", 
-      subtitle: "Serving the community since 1969", 
-      text: '"Join us in our mission to make a positive impact."'
-    },
-    { 
-      src: "/fellowship.jpg", 
-      alt: "fellowship", 
-      title: "Fellowship", 
-      subtitle: "Building Strong Bonds", 
-      text: '"Creating a community of support and camaraderie."'
-    },
-    { 
-      src: "/tree planting.jpg", 
-      alt: "treeplanting", 
-      title: "Environmental Conservation", 
-      subtitle: "Planting for the Future", 
-      text: '"Join our tree planting initiatives and help us create a greener planet."'
-    },
-    { 
-      src: "/tunji.jpeg", 
-      alt: "tunji", 
-      title: "Youth Empowerment", 
-      subtitle: "Nurturing Future Leaders", 
-      text: '"Empowering the youth through various educational and mentorship programs."'
-    }
-  ];
+
+  const { heroSectionContent } = useContext(MyContext)
 
   return (
     <div className="carousel-container">
@@ -44,7 +18,7 @@ const Hero = () => {
         showStatus={false}
         showThumbs={false}
       >
-        {images.map((image, index) => (
+        {heroSectionContent.map((image, index) => (
           <div key={index} className="carousel-item">
             <img 
               src={image.src} 

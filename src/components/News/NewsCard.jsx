@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Slider from 'react-slick';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import { motion } from 'framer-motion'; 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './newscard.css';
+import { MyContext } from '../../MyContext';
+import { NavLink } from 'react-router-dom';
 
 const NewsSection = () => {
-  const newsItems = [
-    { id: 1, src: "/main.jpg", alt: "main", title: "Main Event", date: "23/09/2024" },
-    { id: 2, src: "/fellowship.jpg", alt: "fellowship", title: "Fellowship Meeting", date: "23/09/2024" },
-    { id: 3, src: "/tree planting.jpg", alt: "treeplanting", title: "Tree Planting Initiative", date: "23/09/2024" },
-    { id: 4, src: "/tunji.jpeg", alt: "tunji", title: "Member Spotlight: Tunji", date: "23/09/2024" }
-  ];
+
+  const { activityDetails } = useContext(MyContext)
 
   const settings = {
     dots: true,
@@ -71,10 +70,14 @@ const NewsSection = () => {
       }} />
       <div className="slider-container">
         <Slider {...settings} className='slider'>
-          {newsItems.map((item) => (
-            <div key={item.id} className="slider-item">
+          {Object.keys(activityDetails).map((key) => (
+            <div key={key} className="slider-item">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className='slider-item'>
-                <Card style={{
+                <Card
+                component={NavLink}
+                to={`/activity/${key}`}
+                style={{
+                  textDecoration:'none',
                   height: '100%',
                   transition: 'transform 0.2s',
                   display: 'flex',
@@ -85,12 +88,11 @@ const NewsSection = () => {
                 }}>
                   <CardMedia
                     component="img"
-                    src={item.src}
-                    alt={item.alt}
-                    title={item.title}
+                    image={activityDetails[key].image}
+                    alt={activityDetails[key].title}
                     style={{
-                      height: '200px',  // Fixed height for image
-                      width: '100%',  // Ensure image takes full width
+                      height: '200px',  
+                      width: '100%',  
                       objectFit: 'cover'
                     }}
                   />
@@ -103,11 +105,26 @@ const NewsSection = () => {
                     alignItems: 'center'
                   }}>
                     <Typography variant="h6" style={{ fontFamily: 'Courier', fontWeight: 'bold' }} component="h2" gutterBottom>
-                      {item.title}
+                      {activityDetails[key].title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
-                      {item.date}
+                      {activityDetails[key].date}
                     </Typography>
+                    <Button
+                      variant="contained"
+                      component={NavLink}
+                      to={`/activity/${key}`}
+                      onMouseOver={(e)=> {
+                        e.target.style.backgroundColor = "#1979f5"
+                        e.target.style.color = "white"
+                      }}
+                      style={{backgroundColor: "#0a54f5"}}
+                      onMouseOut={(e)=> {
+                        e.target.style.backgroundColor = "#0a54f5"
+                        e.target.style.color = "white"
+                      }}
+                      className="read-more-button"
+                      >Read More</Button>
                   </CardContent>
                 </Card>
               </motion.div>
