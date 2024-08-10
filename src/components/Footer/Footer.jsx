@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-logo">
-          <img src="/y men.png" alt="Nairobi Y's Men Club Logo" className="footer-logo-img" />
+          <img src="/ymen.png" alt="Nairobi Y's Men Club Logo" className="footer-logo-img" />
           <h2 className="footer-title">Nairobi Y's Men Club</h2>
         </div>
         <div className="footer-links">

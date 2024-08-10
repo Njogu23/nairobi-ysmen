@@ -74,8 +74,6 @@ const NewsSection = () => {
             <div key={key} className="slider-item">
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className='slider-item'>
                 <Card
-                component={NavLink}
-                to={`/activity/${key}`}
                 style={{
                   textDecoration:'none',
                   height: '100%',
@@ -86,16 +84,18 @@ const NewsSection = () => {
                   alignItems: 'center',
                   boxShadow: '0px 10px 15px rgba(2, 7, 80, 0.5)'
                 }}>
-                  <CardMedia
-                    component="img"
-                    image={activityDetails[key].image}
-                    alt={activityDetails[key].title}
-                    style={{
-                      height: '200px',  
-                      width: '100%',  
-                      objectFit: 'cover'
-                    }}
-                  />
+                  <NavLink to={`/activity/${key}`} style={{ width: '100%' }}>
+                    <CardMedia
+                      component="img"
+                      image={activityDetails[key].image}
+                      alt={activityDetails[key].title}
+                      style={{
+                        height: '200px',
+                        width: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </NavLink>
                   <CardContent style={{
                     flexGrow: 1, 
                     color: '#030749', 

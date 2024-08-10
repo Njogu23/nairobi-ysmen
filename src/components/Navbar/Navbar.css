@@ -62,7 +62,6 @@
   gap: 5px;
 }
 
-/* Media queries */
 @media (max-width: 760px) {
   .navbar {
     display: none;

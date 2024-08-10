@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { Card, CardContent, CardMedia, Typography, Container } from '@mui/material';
+import { Card, CardContent, Typography, Container } from '@mui/material';
 import { MyContext } from '../../MyContext';
 import './activities.css';
 
