@@ -9,7 +9,7 @@ export default function Activities() {
     const { activityDetails } = useContext(MyContext)
 
     return (
-        <div>
+        <div className='activities-body'>
             <div className="activities-overlay">
                 <div className="activities-content">
                     <h1>Discover Our Activities and Initiatives</h1>
@@ -21,7 +21,7 @@ export default function Activities() {
                 textAlign: 'center',
                 fontSize: '36px',
                 fontWeight: 'bold',
-                color: '#1a237e',  // Dark blue color
+                color: '#1a237e',  
                 fontFamily: 'Arial, sans-serif',
                 marginTop: '40px'
             }}>
@@ -41,7 +41,7 @@ export default function Activities() {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={activityDetails[key].image}
+                                    image={activityDetails[key].images[0]}
                                     alt={activityDetails[key].title}
                                     className="card-media"
                                 />

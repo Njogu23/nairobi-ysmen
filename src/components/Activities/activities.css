@@ -45,6 +45,7 @@
     color: #fefefe;
     animation: slideInFromTop 1s ease-out;
 }
+
 .activities-content h2 {
     font-size: 2rem;
     color: #fefefe;
@@ -87,25 +88,56 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 95px;
   }
 
+  @media (max-width: 780px) {
+      .activity-detail-container {
+        margin-top: 55px;
+      }
+  }
+  
   .activity-detail-container img {
-    height: 80vh;
+    height: 90vh; 
     width: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
   
   .activity-detail-card {
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    border-radius: 12px; 
+    overflow: hidden; 
+    background: #fff; 
+    display: flex;
+    flex-direction: column;
   }
   
   .activity-detail-media {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 70vh; 
+    width: 100%;
+    object-fit: cover; 
+    border-bottom: 10px solid #fd5507; 
+    filter: brightness(0.8); 
+    transition: filter 0.3s ease-in-out;
+  }
+
+  .activity-detail-media:hover {
+    filter: brightness(1); 
   }
   
-  
+  .activity-detail-content {
+    padding: 30px; 
+    background: #fff; 
+    color: #333; 
+    text-align: center;
+    border-left: 3px solid #1a237e;
+    border-right: 3px solid #1a237e;
+    border-bottom: 3px solid #fd5507;
+  }
+
   .activity-detail-content h4 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -118,3 +150,32 @@
     color: #555555;
   }
   
+  .slider-container {
+    margin:50px 30px; 
+  }
+  
+  .activity-slider-item {
+    padding: 10px;
+  }
+  .activity-slider {
+    padding-bottom: 10px;
+  }
+
+  .activity-content {
+    padding: 5px 30px;
+
+  }
+
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #d32f2f; 
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #1a237e; 
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    color: #1a237e; 
+  }

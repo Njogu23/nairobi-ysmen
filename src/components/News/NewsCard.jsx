@@ -23,6 +23,9 @@ const NewsSection = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -82,12 +85,13 @@ const NewsSection = () => {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   alignItems: 'center',
+                  textAlign: "center",
                   boxShadow: '0px 10px 15px rgba(2, 7, 80, 0.5)'
                 }}>
                   <NavLink to={`/activity/${key}`} style={{ width: '100%' }}>
                     <CardMedia
                       component="img"
-                      image={activityDetails[key].image}
+                      image={activityDetails[key].images[0]}
                       alt={activityDetails[key].title}
                       style={{
                         height: '200px',
