@@ -17,7 +17,7 @@ const ActivityDetail = () => {
     dots: true,
     infinite: true,
     speed: 2000,
-    slidesToShow: activity.images.length < 3? 1 : 3, 
+    slidesToShow: activity.images.length < 3? 1 : 2, 
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
@@ -27,14 +27,6 @@ const ActivityDetail = () => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -85,6 +77,7 @@ const ActivityDetail = () => {
                         className='activity-slider-item'>
                         <Card
                           style={{
+                            maxHeight: '60vh',
                             transition: 'transform 0.2s',
                             display: 'flex',
                             boxShadow: '0px 10px 15px rgba(2, 7, 80, 0.5)'
@@ -94,7 +87,7 @@ const ActivityDetail = () => {
                             image={image}
                             alt={key}
                             style={{
-                              height: '300px',
+                              height: "100%",
                               width: '100%',
                               objectFit: 'cover',
                               borderRadius: "0"
