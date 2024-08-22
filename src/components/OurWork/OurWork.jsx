@@ -27,7 +27,7 @@ const OurWork = () => {
       <div className="card-container">
         {ourWork.map((item, index) => (
           <div key={index} className="card">
-            <img src={item.image} alt={item.title} className="card-image" />
+            <img src={item.image} alt={item.title} loading='lazy' className="card-image" />
             <div className="card-content">
               <Typography variant="h5" className="card-title">{item.title}</Typography>
               <Typography variant="body1" className="card-desc">{item.description}</Typography>

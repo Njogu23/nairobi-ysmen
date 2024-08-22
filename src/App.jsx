@@ -1,29 +1,31 @@
-import About from "./components/About/About";
-import Activities from "./components/Activities/Activities";
-import Footer from "./components/Footer/Footer"
-import Home from "./components/Home"
-import NavBar from "./components/Navbar/NavBar"
+import React, { Suspense, lazy } from 'react';
 import { Route, Routes } from "react-router-dom";
-import Publications from "./components/Publications/Publications";
-import ActivityDetail from "./components/Activities/ActivityDetails";
+import NavBar from "./components/Navbar/NavBar";
+import Footer from "./components/Footer/Footer";
+import LoadingSpinner from "./components/LoadingSpinner";
 
+const About = lazy(() => import("./components/About/About"));
+const Activities = lazy(() => import("./components/Activities/Activities"));
+const Home = lazy(() => import("./components/Home"));
+const Publications = lazy(() => import("./components/Publications/Publications"));
+const ActivityDetail = lazy(() => import("./components/Activities/ActivityDetails"));
 
 function App() {
-  
-
   return (
     <>
-      <NavBar path="/"/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<About />} />
-        <Route path="/activities" element={<Activities />} />
-        <Route path="/activity/:id" element={<ActivityDetail />} />
-        <Route path="/publications" element={<Publications />} />
-      </Routes>
+      <NavBar path="/" />
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<About />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/activity/:id" element={<ActivityDetail />} />
+          <Route path="/publications" element={<Publications />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

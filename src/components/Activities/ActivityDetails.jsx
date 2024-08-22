@@ -84,6 +84,7 @@ const ActivityDetail = () => {
                           }}>
                           <CardMedia
                             component="img"
+                            loading='lazy'
                             image={image}
                             alt={key}
                             style={{

@@ -40,6 +40,7 @@ export default function Activities() {
                             <Card className="card">
                                 <CardMedia
                                     component="img"
+                                    loading='lazy'
                                     height="140"
                                     image={activityDetails[key].images[0]}
                                     alt={activityDetails[key].title}

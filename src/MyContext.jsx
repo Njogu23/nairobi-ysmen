@@ -6,9 +6,20 @@ export const ContextProvider = ({ children }) => {
 
     const activityObject = {
         'limuru-ymca-visit': {
-          id: "1",
+          id: "8",
           title: 'Visit to Limuru YMCA Center',
-          images: ['/limuru-ymca/5.jpg','/limuru-ymca/4.jpg','/limuru-ymca/6.jpg','/limuru-ymca/7.jpg','/limuru-ymca/15.jpg','/limuru-ymca/17.jpg','/limuru-ymca/19.jpg','/limuru-ymca/20.jpg','/limuru-ymca/31.jpg','/limuru-ymca/37.jpg','/limuru-ymca/38.jpg','/limuru-ymca/43.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275758/5_ojmxrm.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275814/20_y0mghx.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275766/17_vymd2y.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275761/6_scllku.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275770/31_e2ctla.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275762/7_s1e5vm.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275772/37_c9e6bm.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275764/15_iulddl.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275768/19_bq8hxz.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275757/4_hvg3jm.jpg',
+          ],
           description: 'Environmental conservation and facility improvement at Limuru YMCA Center.',
           date: "02.02.2012",
           author: "PCP Anthony Muchiri & PRO Perpetual Muriuki",
@@ -23,9 +34,20 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         '15th-Africa-South-East-Regional-Convention-Mukono-Uganda': {
-          id: "2",
+          id: "9",
           title: '15th ASE Regional Convention - Mukono, Uganda',
-          images: ['/rc-2012/52.jpg','/rc-2012/49.jpg','/rc-2012/50.jpg','/rc-2012/51.jpg','/rc-2012/53.jpg','/rc-2012/54.jpg','/rc-2012/55.jpg','/rc-2012/56.jpg','/rc-2012/57.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275960/52_z8bolm.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275964/54_eu2nya.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275969/56_thwicc.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275962/53_aovkjj.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275958/51_yocqps.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275971/57_ftaar0.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275956/50_lmtjas.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275954/49_ffrlus.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275966/55_ihckwr.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275954/49_ffrlus.jpg',
+          ],
           description: 'A memorable journey to the Mukono Regional Convention.',
           date: "03.04.2012",
           content: [
@@ -39,9 +61,13 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'happylife-childrens-home-visit': {
-          id: "10",
+          id: "3",
           title: 'Visit to Happylife Children\'s Home',
-          images: ['/happylife/pdgesther.jpg','/happylife/32.jpg','/happylife/33.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275051/5_1_jut6s2.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275030/33_psoni3.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275030/32_1_a37pug.jpg'
+          ],
           description: 'A heartwarming visit to Happylife Children\'s Home, emphasizing the power of love, care, and small acts of kindness.',
           date: "02.05.2010",
           author: "Guest Justus",
@@ -66,7 +92,7 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'bloodlife-initiative': {
-          id: "11",
+          id: "1",
           title: 'Bloodlife Initiative',
           images: ['/bloodline.png'],
           description: 'A community service activity by Nairobi Y’s Men’s Club in partnership with Bloodlife Initiative – Kenya, raising awareness for blood donation.',
@@ -81,7 +107,7 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'regional-convention-2010': {
-          id: "12",
+          id: "2",
           title: '13th Regional Convention',
           images: ['/rc-2010.jpg'],
           description: 'The 13th Regional Convention held in April 2010 at Kenya YMCA Central Hostel, bringing together Y’s Men and Y’s Youth from across Africa South East region.',
@@ -94,9 +120,17 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'hells-gate-excursion-2010': {
-          id: "13",
+          id: "4",
           title: 'Excursion to Hell\'s Gate - 2010',
-          images: ['/hells-gate/1.jpg', '/hells-gate/2.jpg','/hells-gate/3.jpg','/hells-gate/13.png','/hells-gate/14.png','/hells-gate/25.png','/hells-gate/28.png'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275362/18_1_xp8iqs.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275363/19_1_qk3dig.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275365/27_1_avbzf5.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275371/25_ichs45.png',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275369/14_ytnw0y.png',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275368/13_pyvtv6.png',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275361/11_1_z2hy0x.jpg'
+          ],
           description: 'An adventurous excursion to Hell\'s Gate in the Great Rift Valley, filled with scenic beauty and unforgettable experiences.',
           date: "13.06.2010",
           author: "Justus/Carol",
@@ -110,9 +144,13 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'kereita-forest-tree-planting-2010': {  
-          id: "14",
+          id: "5",
           title: 'Tree Planting at Kereita Forest - 2010',
-          images: ['/treeplanting-2010/15.jpg','/treeplanting-2010/30.jpg','/treeplanting-2010/34.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276304/15_1_lrmrvd.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276310/34_fdszp4.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276307/30_ntmk0m.jpg'
+          ],
           description: 'A significant tree planting activity at Kereita Forest, contributing to environmental conservation and awareness.',
           date: "26.06.2010",
           author: "CS Jean",
@@ -125,9 +163,12 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'handing-over-ceremony-2010': {
-          id: "15",
+          id: "6",
           title: 'Handover Ceremony - 2010',
-          images: ['/handover-2010/16.png','/handover-2010/17.png'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274534/16_kgq5eb.png',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274534/17_vdyszg.png'
+          ],
           description: 'A memorable handover ceremony marking the transition of club leadership.',
           date: "04.07.2010",
           author: "PDG Esther",
@@ -141,9 +182,13 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         "muchiris-wedding": {
-          id: "16",
+          id: "7",
           title: "Muchiri's Wedding",
-          images: ['/wedding/30.jpg','/wedding/23.jpg','/wedding/29.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276356/30_1_om9jtf.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276354/29_1_zg8mmi.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276351/23_1_tcs1x8.jpg'
+          ],
           description: 'A memorable handover ceremony marking the transition of club leadership.',
           date: "14.08.2010",
           author: "PCP Muchiri",
@@ -155,10 +200,28 @@ export const ContextProvider = ({ children }) => {
             'May the spirit of brotherhood in Ysdom live on!'
           ]
         },
-        'handover-ceremony-naivasha=2016': {
-          id: "17",
+        'handover-ceremony-naivasha-2016': {
+          id: "10",
           title: 'Handover Ceremony in Naivasha - 2016',
-          images: ['/handover-2016/517.jpg', '/handover-2016/575.jpg', '/handover-2016/576.jpg', '/handover-2016/577.jpg', '/handover-2016/578.jpg', '/handover-2016/586.jpg', '/handover-2016/587.jpg', '/handover-2016/588.jpg', '/handover-2016/589.jpg', '/handover-2016/590.jpg', '/handover-2016/591.jpg', '/handover-2016/592.jpg', '/handover-2016/593.jpg', '/handover-2016/594.jpg', '/handover-2016/595.jpg', '/handover-2016/596.jpg', '/handover-2016/597.jpg', '/handover-2016/598.jpg', '/handover-2016/599.jpg', '/handover-2016/600.jpg', '/handover-2016/601.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274807/517_skmmsw.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274806/575_exz7re.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274806/576_jfwwpd.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274807/577_w2encv.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274807/578_twv7h4.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274807/586_z2momm.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274808/587_pvcs1d.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274813/588_iw3trm.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274813/589_qzurmm.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274813/590_v3doyc.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274814/591_q6rvz3.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274815/592_r9xdup.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274818/594_t7rwoy.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274819/595_bxjbmd.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274823/596_raynnq.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274824/599_fqzt07.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724274828/600_o3agub.jpg',
+          ],
           author: "Editor",
           description: 'A memorable handover ceremony in Naivasha.',
           date: "22.07.2016",
@@ -172,9 +235,21 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'kenya-district-sports-day-2016': {
-          id: "18",
+          id: "11",
           title: 'Kenya District Sports Day',
-          images: ['/sportsday-2016/527.jpg', '/sportsday-2016/528.jpg', '/sportsday-2016/529.jpg', '/sportsday-2016/604.jpg', '/sportsday-2016/605.jpg', '/sportsday-2016/606.jpg', '/sportsday-2016/607.jpg', '/fellowship.jpg', '/sportsday-2016/609.jpg', '/sportsday-2016/610.jpg', '/sportsday-2016/611.jpg', '/sportsday-2016/612.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276245/527_xesxkq.jpg',
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276247/528_gingny.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276250/529_vbsuj8.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276253/604_i5x3w3.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276256/605_bs8ttk.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276258/607_qkqh3y.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276261/608_xyyunn.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276263/609_edpzph.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276266/610_zvr2q8.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276269/611_mnrfby.jpg', 
+             'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276271/612_tdzz3g.jpg',
+            ],
           description: 'An annual event promoting fitness, fellowship, and unity among Y’s Men across the Kenya District.',
           date: "10.09.2016",
           author: "PDYR James Ndula",
@@ -186,9 +261,22 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'shelter-children-home': {
-          id: "19",
+          id: "12",
           title: 'Visit to Shelter Children\'s Home',
-          images: ['/shelter/549.jpg', '/shelter/550.jpg', '/shelter/551.jpg', '/shelter/552.jpg', '/shelter/553.jpg', '/shelter/554.jpg', '/shelter/555.jpg', '/shelter/556.jpg', '/shelter/557.jpg', '/shelter/558.jpg', '/shelter/559.jpg', '/shelter/560.jpg', '/shelter/561.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276129/559_mpqbgr.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276124/556_sepesi.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276126/557_n3ot1x.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276132/560_jnfzul.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276121/555_dtestq.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276118/554_danxzy.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276116/553_eiibsz.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276113/552_dytivu.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276111/551_wiaaiy.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276109/550_fj9pnk.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276106/549_hd5s9w.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276104/548_oexkud.jpg',
+          ],
           description: 'An annual event promoting fitness, fellowship, and unity among Y’s Men across the Kenya District.',
           date: "03.12.2016",
           author: "CS Lillian Yahuma",
@@ -202,9 +290,16 @@ export const ContextProvider = ({ children }) => {
           ]
         },
         'community-service-kibera-2010': {
-          id: "20",
+          id: "13",
           title: 'Visit to Kibera YMCA Primary School',
-          images: ['/kibera-ymca/IMG-20240803-WA0009.jpg', '/kibera-ymca/IMG-20240803-WA0010.jpg', '/kibera-ymca/IMG-20240803-WA0011.jpg','/kibera-ymca/IMG-20240803-WA0012.jpg','/kibera-ymca/IMG-20240803-WA0013.jpg','/kibera-ymca/IMG-20240803-WA0014.jpg'],
+          images: [
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275465/IMG-20240803-WA0009_nwnw0v.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275461/IMG-20240803-WA0010_a1yljl.jpg', 
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275461/IMG-20240803-WA0012_bjnz6y.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275460/IMG-20240803-WA0013_iw2v0l.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275463/IMG-20240803-WA0011_j575gb.jpg',
+            'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275461/IMG-20240803-WA0010_a1yljl.jpg'
+          ],
           description: 'A successful community service project focused on donating sanitary items and educational materials to students in Kibera.',
           date: "07.06.2024",
           author: "RDE Jared Musima",
@@ -245,12 +340,19 @@ export const ContextProvider = ({ children }) => {
           title: "Youth Empowerment", 
           subtitle: "Nurturing Future Leaders", 
           text: '"Empowering the youth through various educational and mentorship programs."'
+        },
+        { 
+          src: "https://res.cloudinary.com/dwwwraszl/image/upload/v1724275465/IMG-20240803-WA0009_nwnw0v.jpg", 
+          alt: "community service", 
+          title: "Community Service", 
+          subtitle: "Making a Difference Together", 
+          text: '"Be a part of meaningful programs that uplift and support our local communities."'
         }
     ];
 
     const ourWork = [
         {
-          image: '/kibera-ymca/IMG-20240803-WA0009.jpg',
+          image: 'https://res.cloudinary.com/dwwwraszl/image/upload/v1724275465/IMG-20240803-WA0009_nwnw0v.jpg',
           title: 'Community Service',
           description: "Community service is at the heart of the Nairobi Y's Men Club's mission. We are dedicated to making a positive impact in the lives of those around us through various service projects. Our initiatives include feeding programs for the underprivileged, educational support for local schools, healthcare outreach, and support for vulnerable groups such as orphans and the elderly. In partnership with the YMCA, we extend our reach and resources to implement joint community service programs, such as collaborative youth empowerment projects and shared healthcare initiatives. By addressing the immediate needs of our community, we aim to promote social well-being and foster a sense of unity and cooperation.",
         },
@@ -265,7 +367,7 @@ export const ContextProvider = ({ children }) => {
           description: "Empowering our members with the right skills and knowledge is a key priority for the Nairobi Y's Men Club. We offer comprehensive training programs designed to enhance leadership, organizational, and community service skills. Our training sessions cover a wide range of topics, including project management, fundraising strategies, and effective communication. By investing in the development of our members, we ensure they are well-equipped to lead and execute impactful initiatives within the community.",
         },
         {
-          image: '/treeplanting-2010/15.jpg',
+          image: 'https://res.cloudinary.com/dwwwraszl/image/upload/v1724276304/15_1_lrmrvd.jpg',
           title: 'Environmental Conservation',
           description: "The Nairobi Y's Men Club is deeply committed to protecting and preserving our natural environment. Our environmental conservation initiatives include organizing tree planting drives, promoting recycling programs, and conducting clean-up campaigns in local communities. We also collaborate with environmental organizations to raise awareness about sustainability and environmental protection. In partnership with the YMCA, we develop and implement environmental education programs for youth, engaging them in hands-on activities and workshops to cultivate a sense of responsibility towards the environment. Through these efforts, we aim to foster a culture of environmental stewardship and ensure a healthier planet for future generations.",
         },

@@ -1,0 +1,91 @@
+.publications-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .publications-page h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #1a237e;
+  }
+  
+  .publication-item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .publication-item h3 {
+    font-size: 24px;
+    color: #1a237e;
+    margin-bottom: 10px;
+  }
+  
+  .publication-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .publication-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .publication-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .preview-button {
+    background-color: #1a237e;
+    color: white;
+  }
+  
+  .preview-button:hover {
+    background-color: #0d47a1;
+  }
+  
+  .download-button {
+    background-color: #fd5507;
+    color: white;
+  }
+  
+  .download-button:hover {
+    background-color: #e64a19;
+  }
+  
+  .preview-container {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .preview-container iframe {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .close-preview-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-preview-button:hover {
+    background-color: #b71c1c;
+  }
+  

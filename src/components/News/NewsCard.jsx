@@ -91,6 +91,7 @@ const NewsSection = () => {
                   <NavLink to={`/activity/${key}`} style={{ width: '100%' }}>
                     <CardMedia
                       component="img"
+                      loading='lazy'
                       image={activityDetails[key].images[0]}
                       alt={activityDetails[key].title}
                       style={{
